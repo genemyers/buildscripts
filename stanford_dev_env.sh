@@ -18,14 +18,11 @@ git clone https://github.com/genemyers/setup.git
 #setup heroku
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 heroku login
-ssh-keygen –t rsa
+ssh-keygen -t rsa
 heroku keys:add
-#start screen
-screen
 #clone bitstarter project
 git clone https://github.com/genemyers/bitstarter.git
 cd bitstarter
 #get and install express
 sudo npm install express  #-g doesn’t work, or do I need to add path?
 node web.js
-
