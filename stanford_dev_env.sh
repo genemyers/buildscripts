@@ -26,3 +26,4 @@ heroku keys:add
 #get and install express
 sudo npm install express  #-g doesn’t work, or do I need to add path?
 #node web.js
+sudo npm install stripe
