@@ -3,6 +3,8 @@ cd $HOME
 sudo apt-get update
 sudo apt-get install python-software-properties python g++ make
 sudo add-apt-repository ppa:chris-lea/node.js
+# this line updates again, probably to fetch info from that new repositor
+sudo apt-get update
 sudo apt-get install nodejs
 sudo apt-get install npm
 #setup screen
