@@ -24,6 +24,6 @@ heroku keys:add
 #git clone https://github.com/genemyers/bitstarter.git
 #cd bitstarter
 #get and install express
-sudo npm install express  #-g doesn’t work, or do I need to add path?
+#sudo npm install express  #-g doesn’t work, or do I need to add path?
 #node web.js
-sudo npm install stripe
+#sudo npm install stripe
