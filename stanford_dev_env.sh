@@ -18,7 +18,7 @@ git clone https://github.com/genemyers/setup.git
 #setup heroku
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 heroku login
-ssh-keygen -t rsa
+ssh-keygen -t rsa -C "code@datumlogic.com"
 heroku keys:add
 #clone bitstarter project
 #git clone https://github.com/genemyers/bitstarter.git
