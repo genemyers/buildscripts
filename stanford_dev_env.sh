@@ -15,11 +15,15 @@ sudo apt-get install -y git-core
 #install emacs
 git clone https://github.com/genemyers/setup.git 
 ./setup/setup.sh
+
+#if any commandline parameter given, don't setup Heroku
+if [ $1 ==  0 ]; then
 #setup heroku
-wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
-heroku login
-ssh-keygen -t rsa -C "code@datumlogic.com"
-heroku keys:add
+  wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+  heroku login
+  ssh-keygen -t rsa -C "code@datumlogic.com"
+  heroku keys:add
+fi
 #clone bitstarter project
 #git clone https://github.com/genemyers/bitstarter.git
 #cd bitstarter
