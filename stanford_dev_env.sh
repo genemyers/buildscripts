@@ -7,6 +7,7 @@ sudo apt-get install python-software-properties python g++ make
 sudo add-apt-repository ppa:chris-lea/node.js
 sudo apt-get install nodejs
 sudo apt-get install npm
+sudo npm install -g express
 #setup screen
 cd $HOME
 wget raw.github.com/genemyers/dotfiles/master/.screenrc -O .screenrc
