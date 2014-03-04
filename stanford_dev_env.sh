@@ -19,9 +19,9 @@ sudo apt-get install -y git-core
 git clone https://github.com/genemyers/setup.git 
 ./setup/setup.sh
 ssh-keygen -t rsa -C "code@datumlogic.com"
-#if any commandline parameter given, don't setup Heroku
-if [ "$1" == "" ]; then
-#setup heroku
+#if [ "$1" == "" ]; then
+#if any commandline parameter given, don't setup Heroku                                                       
+if [[ -z "$1" ]]; then
   wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
   heroku login
   heroku keys:add
