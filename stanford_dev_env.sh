@@ -1,3 +1,5 @@
+#!/bin/bash
+#put a test here using if [] then to make sure this is called with BASH
 cd $HOME
 #install Node.js
 sudo apt-get update
@@ -15,13 +17,12 @@ sudo apt-get install -y git-core
 #install emacs
 git clone https://github.com/genemyers/setup.git 
 ./setup/setup.sh
-
+ssh-keygen -t rsa -C "code@datumlogic.com"
 #if any commandline parameter given, don't setup Heroku
 if [ "$1" == "" ]; then
 #setup heroku
   wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
   heroku login
-  ssh-keygen -t rsa -C "code@datumlogic.com"
   heroku keys:add
 fi
 #clone bitstarter project
