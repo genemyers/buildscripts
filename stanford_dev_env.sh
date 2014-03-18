@@ -7,6 +7,10 @@ sudo apt-get install python-software-properties python g++ make
 sudo add-apt-repository ppa:chris-lea/node.js
 sudo apt-get install nodejs
 sudo apt-get install npm
+npm set registry http://registry.npmjs.org/
+sudo npm cache clean -f
+sudo npm install -g n
+sudo n stable
 sudo npm install -g express
 #setup screen
 cd $HOME
