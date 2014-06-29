@@ -2,7 +2,9 @@
 #put a test here using if [] then to make sure this is called with BASH
 echo Please enter the Machine name (eg: dev-regservice)
 read machinename
+#puts the new machinename at the end of the localhost line
 sudo sed -i '/^127.0.0.1/ s/$/ '${machinename}'/'  /etc/hosts
+#overwrites the existing machinename
 sudo sed -i 's/.*/'${machinename}'/g' /etc/hostname
 sudo hostname -F /etc/hostname
 cd $HOME
