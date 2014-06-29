@@ -3,6 +3,8 @@ deployenvirons
 
 Scripts for setting up AWS instances for various deployment environment
 
+29 Jun 2014- Now the stanford script runs without any user intervention and sets the machinename
+
 
 SETTING UP AN AWS INSTANCE
 ==========================================================
@@ -15,9 +17,6 @@ $ bash stanford_dev_env.sh NOHEROKU
 
 
 If there any argument after stanford_dev_env.sh, it won’t install the Heroku tool belt.
-
-
-NOTE: can we eliminate the 4 'Enter's needed before the Huroku creeds and the 3 after(when creating rsa keys)  and clean up setup, dot files dirs and stanford_dev_env.sh file when done?
 
 
 ADD THE RSA KEY TO GITHUB

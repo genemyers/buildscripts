@@ -31,13 +31,23 @@ sudo apt-get install -y git-core
 git clone https://github.com/genemyers/setup.git 
 ./setup/setup.sh
 ssh-keygen -t rsa -C "code@datumlogic.com" -f /home/ubuntu/.ssh/id_rsa -N ""
-#if [ "$1" == "" ]; then
+#prints the pub key to the console
+echo Go to https://github.com/settings/ssh and add the following key:
+cat ~/.ssh/id_rsa.pub
+echo At the command line and type in:
+echo ssh -T git@github.com
+echo 
+echo If you have added the SSH key successfull you should see: 
+echo Hi [username]! You\'ve successfully authenticated, but GitHub does not provide shell access!
+
 #if any commandline parameter given, don't setup Heroku                                                       
 if [[ -z "$1" ]]; then
   wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
   heroku login
   heroku keys:add
 fi
+echo
+echo Stanford script finished.
 #clone bitstarter project
 #git clone https://github.com/genemyers/bitstarter.git
 #cd bitstarter
