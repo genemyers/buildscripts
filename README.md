@@ -26,7 +26,7 @@ ADD THE RSA KEY TO GITHUB
 The final operation in the Stanford script creates the Github keys and prints
 the pub key info to the screen, with the following instructions.
 
-\#prints pub key to the console
+\#prints pub key to the console<br>
 $ cat ~/.ssh/id_rsa.pub 
 
 
