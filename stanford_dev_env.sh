@@ -10,10 +10,11 @@ sudo hostname -F /etc/hostname
 cd $HOME
 #install Node.js
 sudo apt-get update
-sudo apt-get install python-software-properties python g++ make
-sudo add-apt-repository ppa:chris-lea/node.js
-sudo apt-get install nodejs
-sudo apt-get install npm
+# -y Assume yes to all queries
+sudo apt-get install -y python-software-properties python g++ make
+sudo add-apt-repository -y ppa:chris-lea/node.js
+sudo apt-get install -y nodejs
+sudo apt-get install -y npm
 npm set registry http://registry.npmjs.org/
 sudo npm cache clean -f
 sudo npm install -g n
@@ -29,7 +30,7 @@ sudo apt-get install -y git-core
 #install emacs
 git clone https://github.com/genemyers/setup.git 
 ./setup/setup.sh
-ssh-keygen -t rsa -C "code@datumlogic.com"
+ssh-keygen -t rsa -C "code@datumlogic.com" -f /home/ubuntu/.ssh/id_rsa -N ""
 #if [ "$1" == "" ]; then
 #if any commandline parameter given, don't setup Heroku                                                       
 if [[ -z "$1" ]]; then
