@@ -12,8 +12,13 @@ cd $HOME
 sudo apt-get update
 # -y Assume yes to all queries
 sudo apt-get install -y python-software-properties python g++ make
-sudo add-apt-repository -y ppa:chris-lea/node.js
-sudo apt-get install -y nodejs
+
+#install NVM, dotfiles and emacs
+git clone https://github.com/genemyers/setup.git 
+sudo ./setup/setup.sh
+
+#sudo add-apt-repository -y ppa:chris-lea/node.js
+#sudo apt-get install -y nodejs
 sudo apt-get install -y npm
 npm set registry http://registry.npmjs.org/
 sudo npm cache clean -f
@@ -26,10 +31,8 @@ wget raw.github.com/genemyers/dotfiles/master/.screenrc -O .screenrc
 #head .screenrc
 #screen
 # gets and installs GIT command line client
-sudo apt-get install -y git-core
-#install emacs
-git clone https://github.com/genemyers/setup.git 
-sudo ./setup/setup.sh
+#sudo apt-get install -y git-core
+
 ssh-keygen -t rsa -C "code@datumlogic.com" -f /home/ubuntu/.ssh/id_rsa -N ""
 #prints the pub key to the console
 echo Go to https://github.com/settings/ssh and add the following key:
