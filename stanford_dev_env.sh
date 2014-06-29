@@ -29,7 +29,7 @@ wget raw.github.com/genemyers/dotfiles/master/.screenrc -O .screenrc
 sudo apt-get install -y git-core
 #install emacs
 git clone https://github.com/genemyers/setup.git 
-./setup/setup.sh
+sudo ./setup/setup.sh
 ssh-keygen -t rsa -C "code@datumlogic.com" -f /home/ubuntu/.ssh/id_rsa -N ""
 #prints the pub key to the console
 echo Go to https://github.com/settings/ssh and add the following key:
