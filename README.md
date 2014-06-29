@@ -13,7 +13,7 @@ $ wget https://raw.github.com/genemyers/deployenvirons/master/stanford_dev_env.s
 
 Now run
 
-$ bash stanford_dev_env.sh NOHEROKU 
+$ bash stanford_dev_env.sh NOHEROKU | tee install.log
 
 
 If there any argument after stanford_dev_env.sh, it won’t install the Heroku tool belt.
