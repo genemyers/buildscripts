@@ -20,7 +20,7 @@ If there any argument after stanford_dev_env.sh, it won’t install the Heroku t
 NOTE: can we eliminate the 4 'Enter's needed before the Huroku creeds and the 3 after(when creating rsa keys)  and clean up setup, dot files dirs and stanford_dev_env.sh file when done?
 
 ==========================================================
-NOW YOU NEED TO ADD THE RSA KEY TO GITHUB
+ADD THE RSA KEY TO GITHUB
 ==========================================================
 
 $ cat ~/.ssh/id_rsa.pub 
