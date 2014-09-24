@@ -1,3 +1,5 @@
+# RUN:  wget https://raw.github.com/genemyers/buildscripts/master/buildNoc.sh
+#       bash buildNoc.sh
 ####################
 # Functions
 ####################
@@ -14,7 +16,7 @@ Pause()
 # Main Script
 ####################
 
-ssh-keygen -t rsa -C "arjundhadwal@zapbuild.com" -f ~/.ssh/id_rsa -N ""
+ssh-keygen -t rsa -C "gene@fezzee.com" -f ~/.ssh/id_rsa -N ""
 
 #prints the pub key to the console
 
