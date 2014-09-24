@@ -14,7 +14,7 @@ Pause()
 # Main Script
 ####################
 
-ssh-keygen -t rsa -C "arjundhadwal@zapbuild.com" -f ~/.ssh/id_rsa -N ""
+sudo ssh-keygen -t rsa -C "arjundhadwal@zapbuild.com" -f ~/.ssh/id_rsa -N ""
 
 #prints the pub key to the console
 
@@ -105,6 +105,10 @@ sudo npm install
 echo "################################################################################"
 
 echo "\nWaaoooo all the required packages successfully installed....Now lift the Sails.."
+
+echo "\nIn case if phpPgAdmin give forbidden access error then just go into '/etc/apache2/conf-enabled/phppgadmin.conf' and change '#allow from all' to 'allow from all'"
+
+echo "\nAnd In case if phpPgAdmin give you 'Login disallowed for security reasons' error then just go edit '/usr/share/phppgadmin/conf/config.inc.php' and change '$conf['extra_login_security'] = true;' to '$conf['extra_login_security'] = false;' " 
 
 echo "\n################################################################################"
 
