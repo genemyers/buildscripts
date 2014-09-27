@@ -8,7 +8,7 @@
 # https://github.com/creationix/nvm
 sudo apt-get install -y git
 git clone https://github.com/genemyers/buildscripts.git
-sudo apt-get install -y curl
+sudo apt-get install -y curl npm
 #curl https://raw.github.com/creationix/nvm/master/install.sh | sh
 wget https://raw.githubusercontent.com/creationix/nvm/v0.10.0/install.sh 
 sudo sh install.sh
@@ -17,8 +17,8 @@ sudo sh install.sh
 sudo su -
 cd /home/ubuntu/
 source /home/ubuntu/.nvm/nvm.sh
-nvm install v0.10.29
-nvm use v0.10.29
+nvm install v0.10.32
+nvm use v0.10.32
 
 # Install jshint to allow checking of JS code within emacs
 # http://jshint.com/
