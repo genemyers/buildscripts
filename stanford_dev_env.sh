@@ -45,7 +45,7 @@ echo
 echo If you have added the SSH key successfull you should see:
 echo Hi [username]! You\'ve successfully authenticated, but GitHub does not provide shell access!
 #create user 'wyld'
-adduser wyld
+sudo adduser wyld
 #adds to the sudo group
 sudo usermod -aG sudo wyld
 
