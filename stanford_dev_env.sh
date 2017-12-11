@@ -17,7 +17,7 @@ sudo apt-get install -y python-software-properties python g++ make
 sudo apt-get install -y git-core
 
 #install NVM, dotfiles and emacs
-git clone https://github.com/genemyers/setup.git 
+git clone https://github.com/genemyers/setup.git
 sudo ./setup/setup.sh
 
 #sudo add-apt-repository -y ppa:chris-lea/node.js
@@ -41,11 +41,15 @@ echo Go to https://github.com/settings/ssh and add the following key:
 cat ~/.ssh/id_rsa.pub
 echo At the command line and type in:
 echo ssh -T git@github.com
-echo 
-echo If you have added the SSH key successfull you should see: 
+echo
+echo If you have added the SSH key successfull you should see:
 echo Hi [username]! You\'ve successfully authenticated, but GitHub does not provide shell access!
+#create user 'wyld'
+adduser wyld -p wyld0ne
+#adds to the sudo group
+sudo usermod -aG sudo wyld
 
-#if any commandline parameter given, don't setup Heroku                                                       
+#if any commandline parameter given, don't setup Heroku
 if [[ -z "$1" ]]; then
   wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
   heroku login
