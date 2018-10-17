@@ -26,7 +26,8 @@ sudo apt-get install -y npm
 npm set registry http://registry.npmjs.org/
 sudo npm cache clean -f
 sudo npm install -g n
-sudo n stable
+sudo n 10.0.0
+#sudo n stable
 sudo npm install -g express
 #setup screen
 cd $HOME
