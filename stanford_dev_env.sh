@@ -16,6 +16,16 @@ sudo apt-get install -y python-software-properties python g++ make
 # gets and installs GIT command line client
 sudo apt-get install -y git-core
 
+# The NVM setup was previously in setup/setup.sh - moved here as it a common need to have nvm manage node versions. Setup is supposed to be
+# used to specify specific types of provisioning so should not contain common elements
+source $HOME/.nvm/nvm.sh
+nvm install --lts
+nvm install stable
+nvm install v10.0.0
+nvm install v9.5.0
+nvm install v9.2.0
+nvm use v9.5.0
+
 #install NVM, dotfiles and emacs
 git clone https://github.com/genemyers/setup.git
 sudo ./setup/setup.sh
@@ -25,9 +35,7 @@ sudo ./setup/setup.sh
 sudo apt-get install -y npm
 npm set registry http://registry.npmjs.org/
 sudo npm cache clean -f
-sudo npm install -g n
-sudo n 10.0.0
-#sudo n stable
+
 sudo npm install -g express
 #setup screen
 cd $HOME
