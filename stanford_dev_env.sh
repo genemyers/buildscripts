@@ -18,6 +18,7 @@ sudo apt-get install -y git-core
 
 # The NVM setup was previously in setup/setup.sh - moved here as it a common need to have nvm manage node versions. Setup is supposed to be
 # used to specify specific types of provisioning so should not contain common elements
+
 wget https://raw.githubusercontent.com/creadtionix/nvm/v0.10.0/install.sh
 sudo sh install.sh
 
@@ -31,6 +32,10 @@ nvm install v10.0.0
 nvm install v9.5.0
 nvm install v9.2.0
 nvm use v9.5.0
+
+#install NVM, dotfiles and emacs
+git clone https://github.com/genemyers/setup.git
+sudo ./setup/setup.sh
 
 #sudo add-apt-repository -y ppa:chris-lea/node.js
 #sudo apt-get install -y nodejs
