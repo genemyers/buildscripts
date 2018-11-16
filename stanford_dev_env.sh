@@ -18,6 +18,13 @@ sudo apt-get install -y git-core
 
 # The NVM setup was previously in setup/setup.sh - moved here as it a common need to have nvm manage node versions. Setup is supposed to be
 # used to specify specific types of provisioning so should not contain common elements
+
+wget https://raw.githubusercontent.com/creadtionix/nvm/v0.10.0/install.sh
+sudo sh install.sh
+
+sudo chown -R ubuntu:ubuntu .nvm *
+sudo chown -R ubuntu:ubuntu .nvm .*
+
 source $HOME/.nvm/nvm.sh
 nvm install --lts
 nvm install stable
@@ -32,7 +39,7 @@ sudo ./setup/setup.sh
 
 #sudo add-apt-repository -y ppa:chris-lea/node.js
 #sudo apt-get install -y nodejs
-sudo apt-get install -y npm
+#sudo apt-get install -y npm
 npm set registry http://registry.npmjs.org/
 sudo npm cache clean -f
 
@@ -43,6 +50,9 @@ wget raw.github.com/genemyers/dotfiles/master/.screenrc -O .screenrc
 #head .screenrc
 #screen
 
+#install dotfiles
+git clone https://github.com/genemyers/setup.git
+sudo ./setup/setup.sh
 
 ssh-keygen -t rsa -C "code@datumlogic.com" -f /home/ubuntu/.ssh/id_rsa -N ""
 #prints the pub key to the console
