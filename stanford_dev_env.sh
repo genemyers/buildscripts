@@ -1,4 +1,4 @@
-#!/bin/bash
+v#!/bin/bash
 #put a test here using if [] then to make sure this is called with BASH
 echo Please enter the Machine name eg: dev-regservice
 read machinename
@@ -19,7 +19,7 @@ sudo apt-get install -y git-core
 # The NVM setup was previously in setup/setup.sh - moved here as it a common need to have nvm manage node versions. Setup is supposed to be
 # used to specify specific types of provisioning so should not contain common elements
 
-wget https://raw.githubusercontent.com/creadtionix/nvm/v0.10.0/install.sh
+wget https://raw.githubusercontent.com/creationix/nvm/v0.10.0/install.sh
 sudo sh install.sh
 
 sudo chown -R ubuntu:ubuntu .nvm *
@@ -34,19 +34,19 @@ nvm install v9.2.0
 nvm use v9.5.0
 
 #install NVM, dotfiles and emacs
-git clone https://github.com/genemyers/setup.git
-sudo ./setup/setup.sh
+#git clone https://github.com/genemyers/setup.git
+#sudo ./setup/setup.sh
 
 #sudo add-apt-repository -y ppa:chris-lea/node.js
 #sudo apt-get install -y nodejs
 #sudo apt-get install -y npm
 npm set registry http://registry.npmjs.org/
-sudo npm cache clean -f
+npm cache clean -f
 
-sudo npm install -g express
+#sudo npm install -g express
 #setup screen
 cd $HOME
-wget raw.github.com/genemyers/dotfiles/master/.screenrc -O .screenrc
+wget https://raw.github.com/genemyers/dotfiles/master/.screenrc #-O .screenrc
 #head .screenrc
 #screen
 
@@ -69,11 +69,11 @@ sudo adduser wyld
 sudo usermod -aG sudo wyld
 
 #if any commandline parameter given, don't setup Heroku
-if [[ -z "$1" ]]; then
-  wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
-  heroku login
-  heroku keys:add
-fi
+#if [[ -z "$1" ]]; then
+#  wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+#  heroku login
+#  heroku keys:add
+#fi
 echo
 echo Stanford script finished.
 #clone bitstarter project
