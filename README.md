@@ -13,7 +13,7 @@ $ wget https://raw.github.com/genemyers/deployenvirons/master/stanford_dev_env.s
 
 Now run
 
-$ bash stanford_dev_env.sh NOHEROKU | tee install.log
+$ bash stanford_dev_env.sh | tee install.log
 
 Please note that 'tee' allows the output of the script to be printed to the console and the screen
 simultaneously
